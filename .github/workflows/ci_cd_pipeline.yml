@@ -45,4 +45,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Instalar dependencias de tu proyecto
+          pip install pytest  # Instalar pytest si aún no está en requirements.txt
+      
+      - name: Run unit tests
+        run: pytest tests/  # Asegúrate de que los tests estén en la carpeta "tests"
 
